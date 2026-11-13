@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace | Artelier</title>
+  <script src="theme.js?v=5"></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="layout.css?v=4">
+</head>
+<body class="dashboard-page">
+  <header class="site-header dashboard-header">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span> Artelier</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation">☰</button>
+    <nav class="main-nav"><a href="index.html">Home</a><a href="register.html">Register</a><a href="signin.html">Sign in</a></nav>
+    <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">☾</button>
+  </header>
+
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Workspace navigation">
+      <h2>Workspace</h2>
+      <button class="side-link active" type="button" data-page="overview">Overview</button>
+      <button class="side-link" type="button" data-page="gallery" data-category="Animation">Animation</button>
+      <button class="side-link" type="button" data-page="gallery" data-category="Digital Art">Digital art</button>
+      <button class="side-link" type="button" data-page="gallery" data-category="Traditional Art">Traditional art</button>
+      <button class="side-link" type="button" data-page="practice">Daily practice</button>
+      <button class="side-link" type="button" data-page="calculator">Calculator</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <section class="workspace-page workspace-section" id="page-overview">
+        <div class="welcome-row">
+          <div><p class="eyebrow">ARTELIER WORKSPACE</p><h1>Your creative space</h1><p>Choose a section to start organizing your work.</p></div>
+          <button class="button button-small" type="button" data-page="gallery" data-category="Animation">Add artwork</button>
+        </div>
+        <div class="stat-grid">
+          <article class="stat-card"><strong id="artCount">0</strong><span>Artworks</span></article>
+          <article class="stat-card"><strong id="taskCount">0</strong><span>Tasks completed</span></article>
+        </div>
+        <h2 class="overview-title">Your workspace</h2>
+        <div class="quick-grid">
+          <button class="quick-card" type="button" data-page="gallery" data-category="Animation"><span>▶</span><b>Animation</b><small>Videos and keyframes</small></button>
+          <button class="quick-card" type="button" data-page="gallery" data-category="Digital Art"><span>✳</span><b>Digital art</b><small>Illustrations and sketches</small></button>
+          <button class="quick-card" type="button" data-page="gallery" data-category="Traditional Art"><span>✎</span><b>Traditional art</b><small>Drawings and paintings</small></button>
+          <button class="quick-card" type="button" data-page="practice"><span>☑</span><b>Daily practice</b><small>Manage your art tasks</small></button>
+          <button class="quick-card" type="button" data-page="calculator"><span>＋</span><b>Calculator</b><small>Quick calculations</small></button>
+        </div>
+      </section>
+
+      <section class="workspace-page workspace-section" id="page-gallery" hidden>
+        <div class="section-heading"><div><p class="eyebrow">YOUR ART</p><h2 id="galleryHeading">Animation gallery</h2><p class="page-description" id="galleryDescription">Add animation videos and keyframe images.</p></div></div>
+        <form class="upload-form" id="artworkForm">
+          <h3>Add artwork</h3>
+          <div class="upload-fields">
+            <input id="artTitle" type="text" placeholder="Artwork title" required>
+            <select id="artSection" aria-label="Art category"><option>Animation</option><option>Digital Art</option><option>Traditional Art</option></select>
+            <select id="artStatus" aria-label="Artwork status"><option>Practice</option><option>Finished</option><option>50% Rule</option></select>
+            <input id="artFile" type="file" accept="image/*,video/*" required>
+            <button class="button button-small" type="submit">Save artwork</button>
+          </div>
+          <p class="form-hint">Animation accepts images and videos. Other galleries accept images. Use “Delete file” on a saved card to remove it from Artelier; the original on your computer stays untouched.</p>
+        </form>
+        <div class="gallery-grid" id="artworkGrid"><p class="empty-state">No artwork here yet. Add a file above.</p></div>
+      </section>
+
+      <section class="workspace-page workspace-section" id="page-practice" hidden>
+        <div class="section-heading"><div><p class="eyebrow">PRACTICE</p><h2>Daily checklist</h2><p class="page-description">Add exercises and mark them when completed.</p></div><span class="small-note" id="taskProgress">0 of 0 completed</span></div>
+        <form class="task-form" id="taskForm">
+          <input id="taskInput" type="text" placeholder="Add a practice task" required>
+          <select id="taskCategory"><option>Anatomy</option><option>Faces</option><option>Gesture</option><option>Coloring</option><option>Perspective</option><option>Animation</option><option>Other</option></select>
+          <button class="button button-small" type="submit">Add task</button>
+        </form>
+        <ul class="task-list" id="taskList"><li class="empty-task">No practice tasks yet.</li></ul>
+      </section>
+
+      <section class="workspace-page workspace-section" id="page-calculator" hidden>
+        <div class="section-heading"><div><p class="eyebrow">QUICK TOOL</p><h2>Calculator</h2><p class="page-description">Basic addition, subtraction, multiplication and division.</p></div></div>
+        <div class="calculator-panel">
+          <input id="calcDisplay" class="calc-display" type="text" value="0" readonly aria-label="Calculator display">
+          <div class="calc-grid">
+            <button type="button" data-key="7">7</button><button type="button" data-key="8">8</button><button type="button" data-key="9">9</button><button class="calc-op" type="button" data-key="/">÷</button>
+            <button type="button" data-key="4">4</button><button type="button" data-key="5">5</button><button type="button" data-key="6">6</button><button class="calc-op" type="button" data-key="*">×</button>
+            <button type="button" data-key="1">1</button><button type="button" data-key="2">2</button><button type="button" data-key="3">3</button><button class="calc-op" type="button" data-key="-">−</button>
+            <button type="button" data-key="0">0</button><button class="calc-clear" type="button" data-key="C">C</button><button class="calc-equal" type="button" data-key="=">=</button><button class="calc-op" type="button" data-key="+">+</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="dashboard-right">
+      <section class="side-panel" id="summaryPanel">
+        <p class="eyebrow" id="summaryEyebrow">WORKSPACE SUMMARY</p>
+        <h2 id="summaryHeading">At a glance</h2>
+        <div id="summaryRows"></div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="drawer-shade" id="drawerShade"></div>
+  <dialog class="media-dialog" id="mediaDialog"><button class="dialog-close" id="closeDialog" type="button" aria-label="Close preview">×</button><div id="mediaView"></div><p id="mediaCaption"></p></dialog>
+
+  <script src="calculator.js"></script>
+  <script src="home.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

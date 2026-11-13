@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Artelier</title>
+  <script src="theme.js?v=5"></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="layout.css?v=4">
+</head>
+<body class="form-page">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span> Artelier</a>
+    <nav class="main-nav"><a href="index.html">Home</a><a href="signup.html">Sign up</a></nav>
+    <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">☾</button>
+  </header>
+
+  <main class="single-form-wrap">
+    <form class="form-card" id="signinForm" novalidate>
+      <p class="eyebrow">WELCOME</p>
+      <h1>Sign in</h1>
+      <p class="form-lead">Enter your details to open the demo workspace.</p>
+      <div class="form-field"><label for="signinEmail">Email address</label><input id="signinEmail" type="text" placeholder="name@example.com"><span class="error-msg"></span></div>
+      <div class="form-field"><label for="signinPassword">Password</label><div class="password-row"><input id="signinPassword" type="password" placeholder="Password"><button type="button" class="show-password" id="showPassword" aria-label="Show password">◉</button></div><span class="error-msg"></span></div>
+      <p class="form-alert" id="signinAlert" aria-live="polite"></p>
+      <button class="button form-submit" type="submit">Continue</button>
+      <p class="form-bottom">New here? <a href="signup.html">Sign up</a></p>
+      <p class="demo-note">Demo only. This page checks input format, not real account credentials.</p>
+    </form>
+  </main>
+
+  <script src="validation.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

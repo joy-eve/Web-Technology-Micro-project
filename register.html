@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration | Artelier</title>
+  <script src="theme.js?v=5"></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="layout.css?v=4">
+</head>
+<body class="form-page">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span> Artelier</a>
+    <nav class="main-nav"><a href="index.html">Home</a><a href="home.html">Workspace</a><a href="signin.html">Sign in</a></nav>
+    <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">☾</button>
+  </header>
+
+  <main class="single-form-wrap wide-form">
+    <form class="form-card" id="registerForm" novalidate>
+      <p class="eyebrow">REGISTRATION</p>
+      <h1>Create your profile</h1>
+      <p class="form-lead">Complete the fields below. The form checks each entry.</p>
+      <div class="form-grid">
+        <div class="form-field"><label for="fullName">Full name</label><input id="fullName" type="text" placeholder="Full name"><span class="error-msg"></span></div>
+        <div class="form-field"><label for="empId">Employee / Register ID</label><input id="empId" type="text" placeholder="6–12 letters or numbers"><span class="error-msg"></span></div>
+        <div class="form-field"><label for="regEmail">Email address</label><input id="regEmail" type="text" placeholder="name@example.com"><span class="error-msg"></span></div>
+        <div class="form-field"><label for="mobile">Mobile number</label><input id="mobile" type="text" maxlength="10" placeholder="10-digit mobile number"><span class="error-msg"></span></div>
+        <div class="form-field"><label for="dept">Division</label><select id="dept"><option value="">Select division</option><option>CSE</option><option>AIML</option><option>ECE</option><option>EEE</option><option>Other</option></select><span class="error-msg"></span></div>
+        <div class="form-field"><label for="regPassword">Password</label><input id="regPassword" type="password" placeholder="Create password"><span class="error-msg"></span></div>
+        <div class="form-field full-field"><label for="confirmPassword">Confirm password</label><input id="confirmPassword" type="password" placeholder="Enter password again"><span class="error-msg"></span></div>
+      </div>
+      <p class="form-hint">Password: at least 8 characters, uppercase, lowercase, number and symbol.</p>
+      <p class="form-alert" id="registerAlert" aria-live="polite"></p>
+      <button class="button form-submit" id="registerSubmit" type="submit" disabled>Submit registration</button>
+      <p class="form-bottom">Already registered? <a href="signin.html">Sign in</a></p>
+      <p class="demo-note">This is a front-end form demonstration. It does not create a secure account.</p>
+    </form>
+  </main>
+
+  <script src="validation.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

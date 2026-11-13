@@ -1,0 +1,72 @@
+.hero, .feature-section { max-width: 1160px; }
+.dashboard-page { min-height: 100vh; }
+.dashboard-header { position: sticky; top: 0; z-index: 20; }
+.dashboard-layout { display: grid; grid-template-columns: 250px 1fr 300px; gap: 18px; max-width: 1500px; margin: auto; padding: 18px; }
+.dashboard-sidebar { position: sticky; top: 86px; display: flex; flex-direction: column; gap: 5px; height: calc(100vh - 105px); padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.dashboard-sidebar h2 { margin: 0 0 8px; font-size: 17px; }
+.side-link { width: 100%; padding: 10px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); text-align: left; font-size: 13px; }
+.side-link:hover, .side-link.active { background: var(--surface-soft); color: var(--primary); }
+.dashboard-main { min-width: 0; }
+.workspace-page[hidden] { display: none !important; }
+.welcome-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 15px; }
+.welcome-row h1 { margin: 0; font-size: 27px; }
+.welcome-row p:not(.eyebrow) { margin: 3px 0 0; color: var(--muted); font-size: 12px; }
+.overview-title { margin: 18px 0 12px; font-size: 20px; }
+.quick-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.quick-card { min-height: 120px; padding: 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--text); text-align: left; }
+.quick-card:hover { border-color: var(--primary); transform: translateY(-1px); }
+.quick-card span, .quick-card b, .quick-card small { display: block; }
+.quick-card span { margin-bottom: 9px; color: var(--primary); font-size: 20px; }
+.quick-card b { font-size: 13px; }
+.quick-card small { margin-top: 4px; color: var(--muted); font-size: 11px; }
+.dashboard-right { display: flex; flex-direction: column; gap: 13px; }
+.side-panel h2 { margin: 0 0 12px; font-size: 19px; }
+.summary-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.summary-row:last-child { border: 0; }
+.summary-row strong { color: var(--text); }
+.calculator-panel { max-width: 360px; }
+@media (max-width: 767px) {
+  .site-header { min-height: 62px; padding: 10px 14px; }
+  .main-nav { display: none; }
+  .header-actions { gap: 9px; }
+  .hero { grid-template-columns: 1fr; gap: 22px; padding: 35px 0 30px; }
+  .hero-panel { min-height: 190px; }
+  .feature-grid, .extra-features, .form-grid { grid-template-columns: 1fr; }
+  .feature-card p { min-height: 0; }
+  .site-footer { flex-wrap: wrap; }
+  .full-field { grid-column: auto; }
+  .dashboard-header .menu-toggle { display: block; margin-left: auto; }
+  .dashboard-layout { display: flex; flex-direction: column; gap: 12px; padding: 12px; }
+  .dashboard-sidebar { position: fixed; top: 62px; bottom: 0; left: 0; z-index: 42; width: 255px; height: auto; border-radius: 0 10px 0 0; transform: translateX(-110%); transition: transform .2s; }
+  .dashboard-sidebar.drawer-open { transform: translateX(0); }
+  .drawer-shade.show { display: block; position: fixed; inset: 62px 0 0; z-index: 40; background: rgba(0,0,0,.35); }
+  .welcome-row h1 { font-size: 23px; }
+  .stat-grid { gap: 6px; }
+  .stat-card { flex-direction: column; align-items: flex-start; gap: 2px; padding: 10px; }
+  .stat-card strong { font-size: 17px; }
+  .upload-fields, .task-form { grid-template-columns: 1fr; }
+  .upload-fields button { grid-column: auto; }
+  .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dashboard-right, .calculator-panel { display: flex; max-width: 100%; }
+}
+
+
+/* Daily task input: give the name field enough room to be readable. */
+.task-form {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 180px auto;
+  align-items: center;
+  gap: 8px;
+}
+.task-form input,
+.task-form select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.task-form input { min-height: 44px; }
+
+@media (max-width: 767px) {
+  .task-form { grid-template-columns: minmax(0, 1fr); }
+  .task-form button { width: 100%; }
+}

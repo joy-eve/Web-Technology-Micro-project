@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Artelier</title>
+  <script src="theme.js?v=5"></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="layout.css?v=4">
+</head>
+<body class="form-page">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span> Artelier</a>
+    <nav class="main-nav"><a href="index.html">Home</a><a href="signin.html">Sign in</a></nav>
+    <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">☾</button>
+  </header>
+
+  <main class="single-form-wrap">
+    <form class="form-card" id="signupForm" novalidate>
+      <p class="eyebrow">NEW ACCOUNT</p>
+      <h1>Sign up</h1>
+      <p class="form-lead">Enter an email and password to continue.</p>
+      <div class="form-field"><label for="signupEmail">Email address</label><input id="signupEmail" type="text" placeholder="name@example.com"><span class="error-msg"></span></div>
+      <div class="form-field"><label for="signupPassword">Password</label><input id="signupPassword" type="password" placeholder="Create password"><span class="error-msg"></span></div>
+      <label class="check-line"><input id="terms" type="checkbox"> I agree to the Terms of Service.</label>
+      <span class="error-msg" id="termsError"></span>
+      <p class="form-alert" id="signupAlert" aria-live="polite"></p>
+      <button class="button form-submit" id="signupSubmit" type="submit" disabled>Create account</button>
+      <p class="form-bottom">Already have an account? <a href="signin.html">Sign in</a></p>
+      <p class="demo-note">Demo only. Real account creation requires a secure server.</p>
+    </form>
+  </main>
+
+  <script src="validation.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

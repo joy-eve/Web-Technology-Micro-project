@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artelier | Art Workspace</title>
+  <script src="theme.js?v=5"></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="layout.css?v=4">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span> Artelier</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="home.html">Workspace</a>
+      <a href="#features">Features</a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-link" href="signin.html">Sign in</a>
+      <a class="button button-small" href="register.html">Register</a>
+      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">☾</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-width">
+      <div>
+        <p class="eyebrow">PERSONAL ART WORKSPACE</p>
+        <h1>Keep your art <span>in one place.</span></h1>
+        <p class="hero-text">Organize animation, digital art and traditional art. Save practice work and keep track of your daily tasks.</p>
+        <div class="hero-actions">
+          <a class="button" href="home.html">Open workspace</a>
+          <a class="text-link" href="register.html">Register</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-swatch swatch-one">Animation</div>
+        <div class="hero-swatch swatch-two">Digital art</div>
+        <div class="hero-swatch swatch-three">Traditional art</div>
+      </div>
+    </section>
+
+    <section class="feature-section page-width" id="features">
+      <div class="section-heading">
+        <div><p class="eyebrow">FEATURES</p><h2>What you can do</h2></div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">▶</span>
+          <h3>Animation</h3>
+          <p>Organize videos and keyframe images in project folders.</p>
+          <a href="home.html#animation">Open section</a>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">✳</span>
+          <h3>Digital art</h3>
+          <p>Keep illustrations, sketches and practice work together.</p>
+          <a href="home.html#digital">Open section</a>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">✎</span>
+          <h3>Traditional art</h3>
+          <p>Organize drawings, paintings and paper studies.</p>
+          <a href="home.html#traditional">Open section</a>
+        </article>
+      </div>
+      <div class="extra-features">
+        <div><strong>Daily practice</strong><span>Create a checklist for your art exercises.</span></div>
+        <div><strong>Local storage</strong><span>Keep your artwork and tasks in this browser.</span></div>
+        <div><strong>Calculator & helper</strong><span>Use the small tools in your workspace.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-width">
+    <span>Artelier · 25CS208 Web Technology</span>
+    <a href="home.html">Open workspace</a>
+  </footer>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
